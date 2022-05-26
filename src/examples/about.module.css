@@ -1,0 +1,11 @@
+.page {
+  color: navy;
+}
+
+page h1 {
+  color: blueviolet;
+}
+
+.text {
+  text-transform: uppercase;
+}

@@ -1,0 +1,28 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #888;
+  background-color: antiquewhite;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 300;
+  color: rgb(153, 4, 4);
+  margin: 40px 0px 20px;
+}
+
+.home-heading {
+  font-size: 36px;
+  font-weight: 300;
+  color: rgb(28, 124, 60);
+  margin: 40px 0px 20px;
+}
+
+.about-heading h1 {
+  font-size: 36px;
+  font-weight: 300;
+  color: rgb(28, 124, 60);
+  margin: 40px 0px 20px;
+}
