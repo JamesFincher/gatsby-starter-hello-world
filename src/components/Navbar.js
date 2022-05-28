@@ -1,29 +1,67 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FiAlignJustify } from "react-icons/fi"
+import logo from "../assets/logo.svg"
+import { useState } from "react"
 
 const Navbar = () => {
+  const [showNav, setShowNav] = useState(false)
+  const showNavToggle = () => {
+    setShowNav(!showNav)
+  }
+
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>{" "}
-          <li>
-            <Link to="/tags">Tags</Link>
-          </li>
-          <li>
-            <Link to="/recipes">Recipes</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav classname="navbar">
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link to="/" onClick={() => setShowNav(false)}>
+            <img src={logo} alt="Simply Recipes"></img>
+          </Link>
+
+          <button className="nav-btn" onClick={showNavToggle}>
+            <FiAlignJustify />
+          </button>
+        </div>
+        <div className={showNav ? "nav-links show-links" : "nav-links"}>
+          <Link
+            to="/"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={showNavToggle}
+          >
+            Home
+          </Link>
+          <Link
+            to="/recipes"
+            className="nav-link"
+            activeClassName="active-link"
+          >
+            Recipes
+          </Link>
+          <Link
+            to="/tags"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={showNavToggle}
+          >
+            Tags
+          </Link>
+          <Link
+            to="/about"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={showNavToggle}
+          >
+            About
+          </Link>
+          <div className="nav-link contact-link">
+            <Link to="/contact" className="btn" onClick={showNavToggle}>
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
   )
 }
 
