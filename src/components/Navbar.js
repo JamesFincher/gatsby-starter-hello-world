@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FiAlignJustify } from "react-icons/fi"
-import logo from "../assets/logo.svg"
+import logo from "../assets/images/logo.svg"
 import { useState } from "react"
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav classname="navbar">
+    <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/" onClick={() => setShowNav(false)}>

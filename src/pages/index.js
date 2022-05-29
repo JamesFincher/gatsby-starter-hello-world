@@ -1,22 +1,30 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import { StaticImage } from "gatsby-plugin-image"
+import FetchData from "../examples/fetchData"
 export default function Home() {
   return (
     <>
       <Layout>
-        <h1>Home Page!</h1>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <div>
-          <a href="/contact">Contact</a>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          aspernatur deserunt est deleniti molestias animi delectus, a sapiente
-          cum adipisci, magnam rem, consequatur nam. Tempora inventore repellat
-          ipsa assumenda rerum?
-        </p>
+        <main className="page">
+          <header className="hero">
+            <StaticImage
+              src="./../assets/images/main.jpeg"
+              alt="egs"
+              className="hero-img"
+              placeholder="tracedSVG"
+              layout="fullWidth"
+            />
+            <div className="hero-container">
+              <div className="hero-text">
+                <h1>Simply Recipes</h1>
+                <h4>Just yummy stuff!</h4>
+              </div>
+            </div>
+          </header>
+          <FetchData />
+        </main>
       </Layout>
     </>
   )
